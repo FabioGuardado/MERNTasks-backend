@@ -7,9 +7,14 @@ const app = express();
 //Conectar a la BD
 conectarDB();
 
+//Habilitar express.json
+app.use(express.json({ extended: true }));
+
 //Puerto del servidor
 const PORT = process.env.PORT || 4000;
 
+//Importar rutas
+app.use('/api/usuarios', require('./routes/usuarios'));
 
 //Arrancar servidor
 app.listen(PORT, () => {
