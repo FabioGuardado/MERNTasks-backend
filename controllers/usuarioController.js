@@ -1,6 +1,6 @@
 const Usuario = require('../models/Usuario');
 const bcryptjs = require('bcryptjs');
-const { validationResult } = require('express-validator');
+const { validationResult } = require('express-validator'); //SIGUIENTE: CAPÍTULO 22
 const jwt = require('jsonwebtoken');
 
 exports.crearUsuario = async (req, res) => {
