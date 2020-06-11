@@ -5,15 +5,16 @@ const cors = require('cors');
 //Crear el servidor
 const app = express();
 
+app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', 'https://frosty-ardinghelli-4a777d.netlify.app/');
+    next();
+  });
+
 //Conectar a la BD
 conectarDB();
 
 //Habilitar CORS
-var corsOptions = {
-    origin: 'https://frosty-ardinghelli-4a777d.netlify.app/',
-    optionsSuccessStatus: 200
-  }
-app.use(cors(corsOptions));
+app.use(cors());
 
 //Habilitar express.json
 app.use(express.json({ extended: true }));
