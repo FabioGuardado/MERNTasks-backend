@@ -9,7 +9,11 @@ const app = express();
 conectarDB();
 
 //Habilitar CORS
-app.use(cors());
+var corsOptions = {
+    origin: 'https://frosty-ardinghelli-4a777d.netlify.app/',
+    optionsSuccessStatus: 200
+  }
+app.use(cors(corsOptions));
 
 //Habilitar express.json
 app.use(express.json({ extended: true }));
