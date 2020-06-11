@@ -6,7 +6,7 @@ const cors = require('cors');
 const app = express();
 
 app.use((req, res, next) => {
-    res.header('Access-Control-Allow-Origin', 'https://frosty-ardinghelli-4a777d.netlify.app/');
+    res.header('Access-Control-Allow-Origin', '*');
     next();
   });
 
