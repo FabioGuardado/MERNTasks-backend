@@ -4,7 +4,6 @@
   "description": "MERN API para MERNTasks",
   "main": "index.js",
   "scripts": {
-    "postinstall": "npm run build",
     "start": "node index.js",
     "dev": "nodemon ."
   },
